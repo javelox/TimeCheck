@@ -76,13 +76,13 @@ const NavbarPages = () => {
                 <div className="hidden space-x-2 md:inline-block">
                     <a
                         href="#"
-                        className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                        className="px-4 py-2 text-white bg-lime-700 rounded-md shadow hover:bg-slate-600"
                     >
                         Sign in
                     </a>
                     <a
                         href="#"
-                        className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+                        className="px-4 py-2 text-white bg-lime-700 rounded-md shadow hover:bg-slate-600"
                     >
                         Sign up
                     </a>
