@@ -1,5 +1,5 @@
 import React from 'react'
-import { Logo } from '../Logo/Logo'
+import { Logo } from '../logo/Logo'
 
 export const DivLogo = () => {
   return (

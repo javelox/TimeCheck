@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import {FcGoogle } from 'react-icons/fc'
 import {GrFacebook } from 'react-icons/gr'
+import { Link } from "react-router-dom";
 
 export const FormLogin = () => {
   const [inputValueCorreo, setInputValueCorreo] = useState("");
@@ -77,7 +78,7 @@ export const FormLogin = () => {
       </div>
 
       <div className="flex justify-center flex-col text-center mt-14 text-slate-400">
-        <p>¿No tienes cuenta? <strong className="text-black underline">Registrate</strong></p>
+        <p>¿No tienes cuenta? <Link to="/Register"><strong className="text-black underline">Registrate</strong></Link></p>
         <p className="mt-4">¿Se te olvidó la contraseña? <strong className="text-black underline">Recuperála</strong></p>
       </div>
 

@@ -1,18 +1,20 @@
 import React from 'react';
 
-import HeaderHome from './components/layout/Header/HeaderHome';
-import { Routes,Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Home } from './components/page/Home/Home';
+import Login from './components/page/Login/Login';
 
 import './App.css';
 
 function App() {
   return (
     <>
-     <HeaderHome/>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/Login' element={<Login />} />
+      </Routes>
 
-     <Home/>
-     
     </>
-  )}
+  )
+}
 export default App;

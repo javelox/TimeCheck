@@ -4,7 +4,7 @@ import React from 'react'
 export const Logo = (props) => {
   return (
     <div>
-      <img width={`${props.width}`} src={"/logoTimecheck.png"} alt="logoTimeCheck" />
+      <img width={`${props.width}`} src={"./logoTimecheck.png"} alt="logoTimeCheck" />
     </div>
   )
 }

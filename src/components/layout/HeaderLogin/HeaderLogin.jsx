@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavbarLogin } from '../../iu/NavbarLogin/NavbarLogin'
+import { NavbarLogin } from '../../ui/NavbarLogin/NavbarLogin'
 
 export const HeaderLogin = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { DivLogo } from '../../iu/DivLogo/DivLogo'
+import { DivLogo } from '../../ui/DivLogo/DivLogo'
 import { FormLogin } from '../FormLogin/FormLogin'
 
 

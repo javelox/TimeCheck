@@ -3,17 +3,18 @@ import Paragraphs from '../../ui/Paragraphs/Paragraphs'
 import ScrollReveal from 'scrollreveal';
 
 export const Section = () => {
+  
   ScrollReveal({ 
     reset: true,
     distance: "60px",
     duration: 2500,
     delay: 400
-});
+ });
 
 
 ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: "left" });
   return (
-    <ScrollReveal>
+    // <ScrollReveal>
     <section>
             <div class="content">
                 <div class="image">
@@ -26,6 +27,6 @@ ScrollReveal().reveal('.main-title, .section-title', { delay: 500, origin: "left
             </div>
       <hr className='border-b my-8 bg-emerald-700' />
     </section>
-    </ScrollReveal>
+    // </ScrollReveal>
   )
 }
