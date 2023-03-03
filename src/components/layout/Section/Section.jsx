@@ -34,7 +34,7 @@ export const Section = () => {
         <img src="/image2.svg" alt="image1" />
       </div>
       <hr className="border-b my-2 bg-emerald- mt-44" />
-      <div className="px-6 mt-52">
+      <div className="px-6 ">
         <h2 className="text-emerald-600 text-xl underline">
           Funciones Principales:
         </h2>

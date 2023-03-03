@@ -54,19 +54,19 @@ const NavbarPages = () => {
                 </div>
                 <div>
                     <div
-                        className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
+                        className={`flex-1 justify-self-center pb-3 mt-2 md:block md:pb-0 md:mt-0 ${navbar ? "block" : "hidden"
                             }`}
                     >
-                        <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+                        <div className=" space-y-2 lg:hidden md:inline-block">
                             <Link
                                 to="/Register"
-                                className="inline-block w-full px-4 py-2 text-center text-lime-700 underline hover:bg-slate-600 hover:text-lime-300"
+                                className="inline-block w-full px-4 py-2 text-center text-emerald-700 underline rounded-md hover:bg-slate-800 hover:text-green-500"
                             >
                                 Registrarse
                             </Link>
                             <Link
                                 to="/Login"
-                                className="inline-block w-full px-4 py-2 text-center text-lime-700 underline rounded-md shadow hover:bg-slate-600 hover:text-lime-300"
+                                className="inline-block w-full px-4 py-2 text-center text-emerald-700 underline rounded-md shadow hover:bg-slate-800 hover:text-green-500"
                             >
                                 Iniciar sesión
                             </Link>
