@@ -1,59 +1,75 @@
 import React, { useEffect, useState } from "react";
-
+import axios from "axios";
+import { apiLogin } from '../../utils/ApiRest'
 import {FcGoogle } from 'react-icons/fc'
 import {GrFacebook } from 'react-icons/gr'
 import { Link } from "react-router-dom";
 
 export const FormLogin = () => {
-  const [inputValueCorreo, setInputValueCorreo] = useState("");
-  const [inputValueContraseña, setInputValueContraseña] = useState("");
+  const [values, setValues] = useState({
+    email: '',
+    password: ''
+  })
   const [claseSpanCorreo, setClaseSpanCorreo] = useState("placeholder");
   const [claseSpanContraseña, setClaseSpanContraseña] = useState("placeholder");
 
   useEffect(() => {
-    if (inputValueCorreo !== "") {
+    if (values.email !== "" ) {
       setClaseSpanCorreo("up_correo");
     } else {
       setClaseSpanCorreo("placeholder");
     }
-  }, [inputValueCorreo]);
-
-  useEffect(() => {
-    if (inputValueContraseña !== "") {
+    if (values.password !== "") {
       setClaseSpanContraseña("up_contraseña");
-    } else {
+    }else{
       setClaseSpanContraseña("placeholder");
     }
-  }, [inputValueContraseña]);
+  }, [values]);
 
-  const handleInputChangeCorreo = (event) => {
-    setInputValueCorreo(event.target.value);
-  };
-  
-  const handleInputChangeContraseña = (event) => {
-    setInputValueContraseña(event.target.value);
-  };
+  const handleChange = (e) =>{
+    const {name, value} = e.target
+    setValues({
+      ...values,
+      [name] : value
+    })
+  }
 
+  const handleSubmit = async(e) =>{
+    e.preventDefault();
+    await axios.post(apiLogin, values,{
+      withCredentials: true
+    })
+    .then((response) => {
+      console.log(response);
+      alert("exito")
+    })
+    .catch((err) => {
+      console.log(err)
+      alert("error")
+    })
+  }
   return (
     <div className="mb-6">
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <div className="flex justify-center mt-14 input-container relative w-full">
           <input
             type="email"
+            name="email"
             className="text-base text-zinc-600 border-b border-black bg-transparent focus:outline-none w-60 pl-1"
             placeholder=""
-            value={inputValueCorreo}
-            onChange={handleInputChangeCorreo}
+            value={values.email}
+            onChange={handleChange}
           />
           <span className={claseSpanCorreo}>Correo electronico...</span>
         </div>
         <div className="flex justify-center mt-10 input-container relative w-full">
           <input
             type="password"
+            name="password"
             className="border-b border-black bg-transparent focus:outline-none w-60 pl-1"
             placeholder=""
-            value={inputValueContraseña}
-            onChange={handleInputChangeContraseña}
+            value={values.password}
+            onChange={handleChange}
           />
           <span className={claseSpanContraseña}>Contraseña...</span>
         </div>

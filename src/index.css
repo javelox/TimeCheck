@@ -29,6 +29,7 @@
   color: #9CA3AF;
   pointer-events: none;
 }
+
 .up_contraseña{
   transition: all 0.5s ease-in-out;
   position: absolute;
