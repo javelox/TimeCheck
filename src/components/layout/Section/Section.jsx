@@ -16,7 +16,7 @@ export const Section = () => {
   });
   return (
     // <ScrollReveal>
-    <section>
+    <section className="">
       <div className="content">
         <div class="image">
           {/* <img src="./img//undraw_dog_c7i6.svg" alt=""/> */}
@@ -28,12 +28,12 @@ export const Section = () => {
           />
         </div>
       </div>
-      <hr className="border-b my-2 bg-emerald-" />
+      <hr className="border-b my-2 bg-emerald-800 h-1"  />
       <div className="flex flex-col gap-5 h-96">
         <img src="/image1.svg" alt="image1" />
         <img src="/image2.svg" alt="image1" />
       </div>
-      <hr className="border-b my-2 bg-emerald- mt-44" />
+      <hr className="border-b h-1 my-2 bg-emerald-800 mt-60" />
       <div className="px-6 ">
         <h2 className="text-emerald-600 text-xl underline">
           Funciones Principales:
